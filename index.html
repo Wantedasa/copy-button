@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copy Button — free by wantedasa.dev</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background:#0d1117; color:#e6edf3; padding:24px; text-align:center; }
+  .tag { font-size:.8rem; color:#8b949e; }
+  .note { font-size:.8rem; color:#6b7280; max-width:520px; }
+  
+</style>
+</head>
+<body>
+<input id="txt" value="hello@wantedasa.dev" style="padding:10px 12px;border-radius:8px;border:1px solid #30363d;background:#161b22;color:#e6edf3;font-size:.95rem;width:240px"><br><button id="cp" style="margin-top:14px;padding:11px 20px;border-radius:10px;border:1px solid #2f81f7;background:#2f81f7;color:#fff;font-weight:600;cursor:pointer">Copy</button>
+
+<script>
+document.getElementById('cp').addEventListener('click',function(){var t=document.getElementById('txt').value;navigator.clipboard.writeText(t).then(function(){var b=document.getElementById('cp');b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},1500);});});
+</script>
+</body>
+</html>
